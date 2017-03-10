@@ -7,42 +7,77 @@
 -->
 <ruleset name="Mediact/Magento1">
     <description>MediaCT coding standards for Magento1.</description>
+    <arg name="colors" />
+    <arg name="extensions" value="php/PHP,phtml/PHP,js/JS,css/CSS" />
 
     <!-- Base rules on MediaCT -->
-    <rule ref="../../../coding-standard/src/MediactCommon"/>
+    <rule ref="../../../coding-standard/src/MediactCommon">
+        <exclude name="PSR1.Classes.ClassDeclaration"/>
+        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
+        <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
+        <exclude name="MediactCommon.Php7.ReturnType" />
+        <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing" />
+        <exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
+        <exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
+        <exclude name="Squiz.Commenting.FunctionComment.EmptyThrows" />
+        <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning" />
+        <exclude name="Generic.Commenting.DocComment.TagValueIndent" />
+        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType" />
+        <exclude name="Generic.PHP.Syntax"/>
+    </rule>
 
     <!-- Base rules on Magento Marketplace -->
-    <rule ref="../../../../magento/marketplace-eqp/MEQP1"/>
+    <rule ref="../../../../magento/marketplace-eqp/MEQP1">
+        <exclude name="PSR1.Classes.ClassDeclaration" />
+        <exclude name="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
+        <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
+        <exclude name="MEQP1.PHP.PrivateClassMember" />
+        <exclude name="MEQP1.Performance.EmptyCheck.FoundCount" />
+        <exclude name="MEQP1.Security.DiscouragedFunction" />
+        <exclude name="MEQP1.Performance.Loop" />
+        <exclude name="MEQP1.SQL.SlowQuery" />
+        <exclude name="MEQP1.Performance.InefficientMethods"/>
+        <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman" />
+        <exclude name="MEQP1.Performance.CollectionCount"/>
+        <exclude name="MEQP1.Templates.XssTemplate"/>
+        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
+        <exclude name="MEQP1.PHP.Syntax"/>
+        <exclude name="MEQP1.Stdlib.DateTime"/>
+    </rule>
 
-    <!-- Exclude rules for Magento -->
-    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="MEQP1.Classes.ResourceModel.OutsideOfResourceModel">
+        <exclude-pattern>Model/Resource</exclude-pattern>
     </rule>
-    <rule ref="Squiz.Classes.ValidClassName.NotCamelCaps">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="MediactCommon.NamingConventions.ValidVariableName">
+        <properties>
+            <property name="allowedNames" type="array" value="_eventPrefix,_eventObject,_cacheTag,_addButtonLabel,_backButtonLabel,_blockGroup,_GET,_POST,_COOKIE,_FILES,_REQUEST,_SERVER,_SESSION"/>
+        </properties>
+        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
-    <rule ref="PSR2.Classes.ClassDeclaration.ExtendsLine">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="Squiz.PHP.CommentedOutCode">
+        <properties>
+            <property name="maxPercentage" value="80"/>
+        </properties>
     </rule>
-    <rule ref="PSR2.Classes.ClassDeclaration.ImplementsLine">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="Zend.NamingConventions.ValidVariableName.NotCamelCaps">
+        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
-    <rule ref="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
-    <rule ref="MediactCommon.Php7.ReturnType.MissingReturnType">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="Squiz.ControlStructures.ControlSignature">
+        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
-    <rule ref="Squiz.Commenting.FunctionComment.TypeHintMissing">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace">
+        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
-    <rule ref="PSR2.Methods.MethodDeclaration.Underscore">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace.Line">
+        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
-    <rule ref="Squiz.Commenting.FunctionComment.EmptyThrows">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing">
+        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
-    <rule ref="Generic.Formatting.MultipleStatementAlignment.NotSameWarning">
-        <exclude-pattern>app/code/*</exclude-pattern>
+    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed">
+        <exclude-pattern>*.phtml</exclude-pattern>
     </rule>
 </ruleset>
