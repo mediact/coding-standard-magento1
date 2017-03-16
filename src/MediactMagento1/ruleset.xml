@@ -13,6 +13,7 @@
     <!-- Base rules on MediaCT -->
     <rule ref="../../../coding-standard/src/MediactCommon">
         <exclude name="PSR1.Classes.ClassDeclaration"/>
+        <exclude name="PSR2.Classes.ClassDeclaration"/>
         <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
         <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
         <exclude name="MediactCommon.Php7.ReturnType" />
