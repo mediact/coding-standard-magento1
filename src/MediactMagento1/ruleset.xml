@@ -33,14 +33,11 @@
         <exclude name="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
         <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
         <exclude name="MEQP1.PHP.PrivateClassMember" />
-        <exclude name="MEQP1.Performance.EmptyCheck.FoundCount" />
         <exclude name="MEQP1.Security.DiscouragedFunction" />
         <exclude name="MEQP1.Performance.Loop" />
         <exclude name="MEQP1.SQL.SlowQuery" />
-        <exclude name="MEQP1.Performance.InefficientMethods"/>
         <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman" />
         <exclude name="MEQP1.Performance.CollectionCount"/>
-        <exclude name="MEQP1.Templates.XssTemplate"/>
         <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
         <exclude name="MEQP1.PHP.Syntax"/>
         <exclude name="MEQP1.Stdlib.DateTime"/>
