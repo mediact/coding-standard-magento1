@@ -24,14 +24,16 @@ root of the project.
 </ruleset>
 ```
 
-# Integration with PHPStorm
+# Integration with PHPStorm and automatic testing
 
-When the phpcs.xml file exists it will be automatically configured by
-`media/coding-standard-phpstorm`. This is triggered by the composer command.
+The recommended way to enable the coding standard in PHPStorm and automatic
+testing is by requiring the MediaCT testing suite in a project.
 
 ```shell
-$ composer install
+$ composer require --dev mediact/testing-suite
 ```
+
+For more information go to [MediaCT Testing Suite](https://github.com/mediact/testing-suite).
 
 # Contribution guidelines
 

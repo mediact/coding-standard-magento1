@@ -1,34 +1,27 @@
 {
-  "name": "mediact/coding-standard-magento1",
-  "description": "MediaCT PHP Coding Standard for Magento1",
-  "type": "phpcs-sniffs",
-  "homepage": "https://bitbucket.org/mediactbv/coding-standard-magento1",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "MediaCT",
-      "email": "contact@mediact.nl"
+    "name": "mediact/coding-standard-magento1",
+    "description": "MediaCT PHP Coding Standard for Magento1",
+    "type": "phpcs-sniffs",
+    "homepage": "https://bitbucket.org/mediactbv/coding-standard-magento1",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "MediaCT",
+            "email": "contact@mediact.nl"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.mediact.nl"
+        },
+        {
+            "type": "composer",
+            "url": "https://repo.magento.com"
+        }
+    ],
+    "require": {
+        "magento/marketplace-eqp": "^1.0",
+        "mediact/coding-standard": "@stable"
     }
-  ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://composer.mediact.nl"
-    },
-    {
-      "type": "composer",
-      "url": "https://repo.magento.com"
-    }
-  ],
-  "require": {
-    "php": "^5.4.0 || ^7.0",
-    "mediact/coding-standard": "^1.0",
-    "squizlabs/php_codesniffer": "^2.0",
-    "magento/marketplace-eqp": "^1.0"
-  },
-  "autoload": {
-    "psr-0": {
-      "MediactMagento1": "src/MediactMagento1"
-    }
-  }
 }
