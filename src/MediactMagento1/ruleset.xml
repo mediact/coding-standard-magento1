@@ -27,35 +27,11 @@
         <exclude name="Generic.PHP.Syntax"/>
     </rule>
 
-    <!-- Base rules on Magento Marketplace -->
-    <rule ref="../../../../magento/marketplace-eqp/MEQP1">
-        <exclude name="PSR1.Classes.ClassDeclaration" />
-        <exclude name="Zend.NamingConventions.ValidVariableName.PrivateNoUnderscore"/>
-        <exclude name="Generic.Arrays.DisallowShortArraySyntax" />
-        <exclude name="MEQP1.PHP.PrivateClassMember" />
-        <exclude name="MEQP1.Security.DiscouragedFunction" />
-        <exclude name="MEQP1.Performance.Loop" />
-        <exclude name="MEQP1.SQL.SlowQuery" />
-        <exclude name="Generic.Functions.OpeningFunctionBraceBsdAllman" />
-        <exclude name="MEQP1.Performance.CollectionCount"/>
-        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
-        <exclude name="MEQP1.PHP.Syntax"/>
-        <exclude name="MEQP1.Stdlib.DateTime"/>
-    </rule>
-
-    <rule ref="MEQP1.Classes.ResourceModel.OutsideOfResourceModel">
-        <exclude-pattern>Model/Resource</exclude-pattern>
-    </rule>
     <rule ref="MediactCommon.NamingConventions.ValidVariableName">
         <properties>
             <property name="allowedNames" type="array" value="_eventPrefix,_eventObject,_cacheTag,_addButtonLabel,_backButtonLabel,_blockGroup,_GET,_POST,_COOKIE,_FILES,_REQUEST,_SERVER,_SESSION"/>
         </properties>
         <exclude-pattern>*.phtml</exclude-pattern>
-    </rule>
-    <rule ref="Squiz.PHP.CommentedOutCode">
-        <properties>
-            <property name="maxPercentage" value="80"/>
-        </properties>
     </rule>
     <rule ref="Zend.NamingConventions.ValidVariableName.NotCamelCaps">
         <exclude-pattern>*.phtml</exclude-pattern>
