@@ -10,18 +10,7 @@
             "email": "contact@mediact.nl"
         }
     ],
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://composer.mediact.nl"
-        },
-        {
-            "type": "composer",
-            "url": "https://repo.magento.com"
-        }
-    ],
     "require": {
-        "magento/marketplace-eqp": "^1.0",
         "mediact/coding-standard": "@stable"
     }
 }
