@@ -7,5 +7,5 @@
 -->
 <ruleset name="Mediact/Magento1">
     <description>Youwe coding standards for Magento1. Deprecated please use Magento1.</description>
-    <rule ref="../Magento1/ruleset.xml" />
+    <rule ref="../Magento1" />
 </ruleset>
