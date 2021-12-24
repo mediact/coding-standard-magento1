@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright Youwe. All rights reserved.
+ * https://www.youweagency.com
+ */
+-->
+<ruleset name="Magento1">
+    <description>Youwe coding standards for Magento1.</description>
+    <arg name="colors" />
+    <arg name="extensions" value="php/PHP,phtml/PHP,js/JS,css/CSS" />
+
+    <!-- Base rules on Youwe -->
+    <rule ref="../../../coding-standard/src/GlobalCommon">
+        <exclude name="PSR1.Classes.ClassDeclaration"/>
+        <exclude name="PSR2.Classes.ClassDeclaration"/>
+        <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps" />
+        <exclude name="Squiz.Commenting.FunctionComment.ScalarTypeHintMissing" />
+        <exclude name="GlobalCommon.Php7.ReturnType" />
+        <exclude name="Squiz.Commenting.FunctionComment.TypeHintMissing" />
+        <exclude name="PSR2.Methods.MethodDeclaration.Underscore" />
+        <exclude name="PSR2.Classes.PropertyDeclaration.Underscore" />
+        <exclude name="Squiz.Commenting.FunctionComment.EmptyThrows" />
+        <exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning" />
+        <exclude name="Generic.Commenting.DocComment.TagValueIndent" />
+        <exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType" />
+        <exclude name="Generic.PHP.Syntax"/>
+    </rule>
+
+    <rule ref="GlobalCommon.NamingConventions.ValidVariableName">
+        <properties>
+            <property name="allowedNames" type="array" value="_eventPrefix,_eventObject,_cacheTag,_addButtonLabel,_backButtonLabel,_blockGroup,_GET,_POST,_COOKIE,_FILES,_REQUEST,_SERVER,_SESSION"/>
+        </properties>
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+    <rule ref="Zend.NamingConventions.ValidVariableName.NotCamelCaps">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+    <rule ref="Generic.Files.LineLength.TooLong">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.ControlStructures.ControlSignature">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.ScopeClosingBrace">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+    <rule ref="PEAR.WhiteSpace.ScopeClosingBrace.Line">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+    <rule ref="Generic.CodeAnalysis.ForLoopWithTestFunctionCall.NotAllowed">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+</ruleset>

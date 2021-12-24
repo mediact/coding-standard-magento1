@@ -1,16 +1,22 @@
 {
-    "name": "mediact/coding-standard-magento1",
-    "description": "MediaCT PHP Coding Standard for Magento1",
+    "name": "youwe/coding-standard-magento1",
+    "description": "Youwe PHP Coding Standard for Magento1",
     "type": "phpcs-sniffs",
-    "homepage": "https://bitbucket.org/mediactbv/coding-standard-magento1",
+    "homepage": "https://github.com/YouweGit/coding-standard-magento1",
     "license": "proprietary",
     "authors": [
         {
-            "name": "MediaCT",
-            "email": "contact@mediact.nl"
+            "name": "Youwe",
+            "email": "support@youweagency.com"
         }
     ],
     "require": {
-        "mediact/coding-standard": "@stable"
-    }
+        "mediact/coding-standard": "dev-feature/OTPBBBBBZP-117"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/YouweGit/coding-standard"
+        }
+    ]
 }
