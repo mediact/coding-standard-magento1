@@ -1,6 +1,7 @@
 {
     "name": "mediact/coding-standard-magento1",
     "description": "MediaCT PHP Coding Standard for Magento1",
+    "abandoned": "youwe/coding-standard-magento1",
     "type": "phpcs-sniffs",
     "homepage": "https://bitbucket.org/mediactbv/coding-standard-magento1",
     "license": "proprietary",

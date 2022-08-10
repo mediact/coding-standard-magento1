@@ -1,4 +1,4 @@
-# Introduction
+# [ABANDONED] Introduction
 
 This is the MediaCT coding standard for Magento 1 projects. It is based on 
 the default MediaCT coding standard but some tests have been removed to create
